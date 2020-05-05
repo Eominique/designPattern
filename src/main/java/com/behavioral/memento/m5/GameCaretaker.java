@@ -1,0 +1,19 @@
+package com.behavioral.memento.m5;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GameCaretaker {
+
+    List<PlayerMemento> saveGames = new ArrayList<>();
+
+    public void saveGame(Player player) {
+        PlayerMemento memento = player.createMemento();
+        saveGames.add(memento);
+    }
+
+    public Player loadGame() {
+        PlayerMemento memento =saveGames.get(saveGames.size()-1);
+        return Player.createPlayer(memento);
+    }
+}

@@ -1,4 +1,4 @@
-package com.creational.absFactory.android;
+package com.creational.abstractFactory.android;
 
 public enum  OSType {
     WINDOWS,
